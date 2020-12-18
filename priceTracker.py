@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-csvfile=open('results.csv','r', newline='')
+csvfile=open('sample.csv','r', newline='')
 obj=csv.reader(csvfile)
 
 driver = webdriver.Chrome()
@@ -60,6 +60,3 @@ def send_email(product):
 while True:
     get_price()
     time.sleep(60)
-
-
-

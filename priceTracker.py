@@ -36,10 +36,10 @@ def get_price():
 		final_price = float(final_price.replace(',', '').replace("₹", '').replace(" ", ''))
 		print(final_price)
 		if final_price < float(product[1]):
-		   send_email()
+		   send_email(product)
 
 
-def send_email():
+def send_email(product):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
@@ -60,4 +60,6 @@ def send_email():
 while True:
     get_price()
     time.sleep(60)
+
+
 
